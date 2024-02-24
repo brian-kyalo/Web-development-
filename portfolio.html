@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navigation Menu</title>
+    <style>
+        /* Basic CSS for styling the navigation menu */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #333;
+        }
+        
+    </style>
 </head>
 <body>
-    <p>My name is Brian</p>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to our website!</p>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>This is a brief discription of our company we offer agricultural insigts and a system that enables you to manage your farms from anywhere </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Check out our projects below:</p>
+        <ul>
+            <li>Project AgriBot</li>
+            <li>Project Mental Health</li>
+            <li>Project RecoverMode</li>
+        </ul>
+    </section>
 </body>
 </html>
