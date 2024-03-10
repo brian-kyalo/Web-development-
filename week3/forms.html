@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms Week 3</title>
+    </head>
+    <body>
+        <!--
+        input 
+        checkboxes 
+        radio buttons 
+        textareas 
+        select dropdowns
+        
+        action attribute -> defines the location of the script that process data of this form.
+        method-> defines how the attribute will be transferred.
+        php-> server side language.
+        -enctype-> encoding type 
+        -->
+
+        <form action="base/data.php" method="post" enctype="application/x-www-form-urlencoded">
+        <label for="student_name">Name:</label>
+            <input type="text" name="student_name" id="student_name">
+            <br>
+             <!-- input- a void element.
+             for attribute binds the label to an input element
+            name attribute defines the name of the element when data is submitted 
+            In html the name attribute and id attribute most of the times are similar. -->
+            <label for="student_email">Email:</label>
+            <input type="email" name="student_email" id="student_email">
+            <!--textarea element used for multiline elements.
+            The row and column attribute define the size of your text area -->    
+            <textarea name="bio" id="bio" cols="30" rows="10">Please Enter your Bio:</textarea>
+            <!--Checkboxes - comonly used when one has a list of items and you want a user to select one or more items from a list
+            for checkboxes and radio buttons the label comes after the element the input.
+            The attribute checked pre selects the check box
+        The field set element is used to group related elements withing the form-->
+            
+        <fieldset>
+            <legend>Farming options:</legend>
+            <input type="checkbox" name="Large-scale" id="Large-scale"value ="Large Scale" checked>
+            <label for="math">Math</label>
+            <input type="checkbox" name="Small-scale" id="Small-scale"value ="Small scale" >
+            <label for="math">Math</label>
+        </fieldset>
+
+        <!--Radio button a list of items but you can only select one unlike checkboxes.This is due to providing the check box with one name.-->
+        <fieldset>
+            <legend>Farm options:</legend>
+            <input type="radio" name="farmer-type" id="farmer-type">
+            <label for="farmer-type">Large Scale farmer</label>
+            <input type="radio" name="farmer-type" id="farmer-type">
+            <label for="farmer-type">Small Scale farmer</label>
+
+        </fieldset>
+
+        <!--Selecting items from a drop down in this case we use a select box.
+        To allow multiple selection of a drop down you add the attribute multiple-->
+        <label for="classes">Classes:</label>
+        <select name="classes" id="classes" >
+            <option value="">Select prefered Class--</option>
+            <option value="Green">Green</option>
+            <option value="">Blue</option>
+            <option value="">Red</option>
+            <option value="">Orange</option>
+            <option value="">Amber</option>
+        </select>
+        
+        <!--Selecting a file or uploding a file or a folder
+        The accept attribute restricts the type of file accepted by the input element-->
+        <label for="file">Files:</label>
+        <input type="file" name="file" id="file" accept=".jpg">
+        <label for="search">Search for something</label>
+        <input type="search">
+        <!--There are three diff types of buttons 
+        1. clickable button
+    2. A reset button clears everthing entered on a form and reset to the default-->
+        <hr> <!--an horizontale rule-->
+        <input type="button" name="click me" id="click me" value="click me">
+        <input type="reset"id="clear"name="clear"value="clear form">
+        <input type="submit"id="submit"name="submit" value="Submit Form">
+        <button>Click me</button>
+        </form>
+
+       
+
+        
+    </body>
+</html>
